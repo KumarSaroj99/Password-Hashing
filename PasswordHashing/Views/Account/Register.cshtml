@@ -1,0 +1,32 @@
+﻿
+@model PasswordHashing.ViewModels.RegisterViewModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+<body>
+
+
+
+
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    {
+        <div>
+            <label>Username:</label>
+            @Html.TextBoxFor(m => m.Username)
+        </div>
+        <div>
+            <label>Password:</label>
+            @Html.PasswordFor(m => m.Password)
+        </div>
+        <div>
+            <input type="submit" value="Register" />
+        </div>
+    }
+
+
+</body>
+</html>
